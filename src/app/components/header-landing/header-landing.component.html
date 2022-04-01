@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport 
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === true">
+        
+        <mat-toolbar><mat-icon>menu</mat-icon></mat-toolbar>
+          <mat-nav-list>
+          <a mat-list-item href="#"><mat-icon>home</mat-icon><strong>Inicio</strong></a>
+          <a mat-list-item [routerLink]="['/signUp']" routerLinkActive="router-link-active"><mat-icon>person_pin</mat-icon><strong>Registrate</strong></a>
+          <a mat-list-item href="#"><mat-icon>info</mat-icon><strong>Acerca de</strong></a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="navbar" color="primary">
+          <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon"></mat-icon>
+          </button>
+          <span [routerLink]="['/home']" class="logo">Todo IT<img src="../../../assets/todo-it-logo.png" class="logo"> </span>
+          <a [routerLink]="['/signUp']" routerLinkActive="router-link-active" mat-button class="botonDeRegistro">Regístrate</a>
+        </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  

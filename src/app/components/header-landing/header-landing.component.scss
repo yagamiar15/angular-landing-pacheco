@@ -1,0 +1,41 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: #3F55B1
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  
+  .mat-toolbar {
+    font-size: 40px;
+    color: #E8EAF6;
+    justify-content: space-evenly;
+  }
+
+  .mat-icon {
+    margin-right: 10px;
+  }
+  
+  .navbar {
+    justify-content: space-between;
+  }
+  
+  .botoncito {
+    padding-right: 1rem;
+  }
+  
+  .logo {
+    height: 40px;
+    cursor: pointer;
+  }
